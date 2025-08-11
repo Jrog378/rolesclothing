@@ -1,39 +1,62 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import './App.css'
-import { Button, CardContent, Grid, Stack, Box, Typography, Fade } from '@mui/material'
+import { Button, CardContent, Grid, Stack, Box, Typography, Card } from '@mui/material'
 import { Link } from "react-router";
+import { entries } from './pages/Products';
+import type { ProductDetailsProps } from './pages/ProductPage';
 
-const lines = [
-  'Look Better, Feel Better',
-  'Recreate your style with Roles',
-  'Freshen up with our American Cotton Blend',
-  'Soft, Breathable Materials',
-  '100% Satisfaction Guarantee',
-];
+// const lines = [
+//   'Look Better, Feel Better',
+//   'Recreate your style with Roles',
+//   'Freshen up with our American Cotton Blend',
+//   'Soft, Breathable Materials',
+//   '100% Satisfaction Guarantee',
+// ];
 
-export function MuiTextCarousel() {
-  const [index, setIndex] = useState(0);
-
-  const handleNext = () => {
-    setIndex((prev) => (prev + 1) % lines.length);
-  };
-
-  const handleBack = () => {
-    setIndex((prev) => (prev - 1 + lines.length) % lines.length);
-  };
-
+function CarouselCard({entry}: {entry: ProductDetailsProps}) {
   return (
-    <Box sx={{ minHeight: 120 }}>
-      <Stack direction="row" width={"100%"} justifyContent={'space-between'} spacing={2} mt={2}>
-        <Button onClick={handleBack}>Back</Button>
-        <Typography variant="h5" sx={{ minHeight: 80 }}>
-          {lines[index]}
-        </Typography>
-        <Button onClick={handleNext}>Next</Button>
-      </Stack>
-    </Box>
-  );
+    <Grid key={entry.id} size={{ md: 6, lg: 4 }} style={{ padding: '10px', margin:'auto' }}>
+      <Card className={'product-card'}>
+        <a className={'color-change'} href={`/products/${entry.id}`} style={{ color: 'black' }}>
+          <CardContent>
+            <img src={entry.colors[0].images[0]} onMouseOver={e => (e.currentTarget.src = entry.colors[0].images[1])}
+              onMouseOut={e => (e.currentTarget.src = entry.colors[0].images[0])} style={{ width: '100%' }} />
+          </CardContent>
+          <Typography>
+            <h3 style={{ width: '100%', textAlign: 'center', margin: '0' }}>{entry.title}</h3>
+            <p style={{ width: '100%', textAlign: 'center', paddingBottom: '10px' }}>${entry.price}</p>
+          </Typography>
+        </a>
+      </Card>
+    </Grid>
+  )
 }
+
+// export function MuiTextCarousel() {
+//   const [index, setIndex] = useState(0);
+
+//   
+
+//   const handleNext = () => {
+//     setIndex((prev) => (prev + 1) % three.length);
+//   };
+
+//   const handleBack = () => {
+//     setIndex((prev) => (prev - 1 + three.length) % three.length);
+//   };
+
+//   return (
+//     <Box sx={{ minHeight: 120 }}>
+//       <Stack direction="row" width={"100%"} justifyContent={'space-between'} spacing={2} mt={2}>
+//         <Button onClick={handleBack}>Back</Button>
+//         <Grid container>
+//           {<CarouselCard entry={three[index]}/>}
+//         </Grid>
+//         <Button onClick={handleNext}>Next</Button>
+//       </Stack>
+//     </Box>
+//   );
+// }
 
 
 
@@ -102,6 +125,8 @@ function Animation() {
 }
 
 function App() {
+
+  let three: ProductDetailsProps[] = entries.slice(0, 3);
   return (
     <Box>
       <Grid container padding={'1rem'}>
@@ -156,7 +181,12 @@ function App() {
         </Stack>
       </Box>
       <Animation />
-      <MuiTextCarousel />
+      <Grid container>
+        {three.map((one) => (
+          <CarouselCard entry={one}/>
+        ))}
+      </Grid>
+      {/* <MuiTextCarousel /> */}
     </Box>
   )
 }

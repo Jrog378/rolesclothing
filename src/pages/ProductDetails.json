@@ -76,5 +76,31 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "second-zip",
+        "title": "Respect Zip Hoodie",
+        "description": "Quality motivational print zip hoodie",
+        "price":"59.99",
+        "colors": [
+            {
+                "name": "Black",
+                "link": "https://buy.stripe.com/dR6aHr5402Yu2Yw8wB",
+                "header": "/BlackZipFront2.jpg",
+                "images": [
+                    "/BlackZipFront2.jpg",
+                    "/BlackZipBack2.jpg"
+                ]
+            },
+            {
+                "name": "Blue",
+                "link": "https://buy.stripe.com/3cseXH7c8cz46aI4gn",
+                "header": "/BlueZipFront2.jpg",
+                "images": [
+                    "/BlueZipFront2.jpg",
+                    "/BlueZipBack2.jpg"
+                ]
+            }
+        ]
     }
 ]
