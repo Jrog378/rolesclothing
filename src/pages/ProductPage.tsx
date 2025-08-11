@@ -24,7 +24,7 @@ export default function ProductPage() {
 
     const [color, setColor] = useState(0);
     const [image, setImage] = useState(0);
-    const [size, setSize] = useState('Unselected')
+    // const [size, setSize] = useState('Unselected')
 
     const colors = entry.colors ?? []
     const imgs = colors[color].images ?? [];
