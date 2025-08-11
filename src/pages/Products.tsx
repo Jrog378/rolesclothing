@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, Grid, Stack, Typography } from "@mui/material";
+import { Box, Card, CardContent, Grid, Typography } from "@mui/material";
 import ProductDetails from "./ProductDetails.json"
 import type { ProductDetailsProps } from "./ProductPage";
 
