@@ -1,0 +1,109 @@
+import {useState} from "react";
+import {Button, Col, Container, Image, Nav, Row, Tab} from "react-bootstrap";
+import {Rating} from "@mui/material";
+
+export default function FirstHoodie() {
+    const [hoodie, setHoodie] = useState(0);
+    const [click, setClick] = useState(true);
+    const colors = ['Black', 'Red']
+    const urls = ['https://buy.stripe.com/00gg1L5406aG1UsfZd', 'https://buy.stripe.com/6oEg1L9kg56C42A7sG']
+    return (
+        <Container style={{padding: '10px'}}>
+            <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+                <Row>
+                    <Col sm={3} xs={3} style={{maxWidth: '150px', overflow: 'scroll', maxHeight: '90vh'}}>
+                        <Row style={{overflow: 'visible'}}>
+                            <Nav.Link eventKey="first"><Image src={`/${colors[hoodie]}HoodieFront1.jpg`}
+                                                              style={{width: '100%'}}/></Nav.Link>
+                        </Row>
+                        <Row style={{overflow: 'visible'}}>
+                            <Nav.Link eventKey="second"><Image src={`/${colors[hoodie]}HoodieBack1.jpg`}
+                                                               style={{width: '100%'}}/></Nav.Link>
+                        </Row>
+                    </Col>
+                    <Col lg={6} xs={9} style={{maxHeight: '600px'}}>
+                        <Tab.Content>
+                            <Tab.Pane eventKey="first"><Container><Image style={{width: '100%'}}
+                                                                         src={`/${colors[hoodie]}HoodieFront1.jpg`}/></Container></Tab.Pane>
+                            <Tab.Pane eventKey="second"><Container><Image style={{width: '100%'}}
+                                                                          src={`/${colors[hoodie]}HoodieBack1.jpg`}/></Container></Tab.Pane>
+                        </Tab.Content>
+                    </Col>
+                    <Col lg={3} xs={12}>
+                        <h1>Keep Going Zip Hoodie</h1>
+                        <Col>
+                            <Row>
+                                <h3>Ratings</h3>
+                                <Rating name="half-rating-read" defaultValue={4.5} precision={0.5} readOnly/>
+                            </Row>
+                            <Row>
+                                <h3 style={{paddingTop:'5px'}}>$59.99</h3>
+                            </Row>
+                            <Row>
+                                {click
+                                    ?
+                                    <>
+                                        <Col style={{height: '75px', padding: '10px'}}>
+                                            <Container style={{border: '1px solid grey', borderRadius: '5px'}}>
+                                                <a className={'color-change'} onClick={() => setHoodie(0)}>
+                                                    <Image
+                                                        style={{display: 'block', maxHeight: '100%', maxWidth: '100%'}}
+                                                        src={'/BlackHoodieFront1.jpg'}/>
+                                                    <p style={{color: 'black', margin: 0}}>Black</p>
+                                                </a>
+                                            </Container>
+                                        </Col>
+                                        <Col style={{padding: '10px'}}>
+                                            <Container onMouseOver={() => setHoodie(1)}
+                                                       onMouseOut={() => setHoodie(0)}>
+                                                <a className={'color-change'} onClick={() => setClick(false)}>
+                                                    <Image
+                                                        style={{display: 'block', maxHeight: '100%', maxWidth: '100%'}}
+                                                        src={'/RedHoodieFront1.jpg'}/>
+                                                    <p style={{color: 'black', margin: 0}}>Red</p>
+                                                </a>
+                                            </Container>
+                                        </Col>
+                                    </>
+                                    :
+                                    <>
+                                        <Col style={{height: '75px', padding: '10px'}}>
+                                            <Container onMouseOver={() => setHoodie(0)}
+                                                       onMouseOut={() => setHoodie(1)}>
+                                                <a className={'color-change'} onClick={() => setClick(true)}>
+                                                    <Image
+                                                        style={{display: 'block', maxHeight: '100%', maxWidth: '100%'}}
+                                                        src={'/BlackHoodieFront1.jpg'}/>
+                                                    <p style={{color: 'black', margin: 0}}>Black</p>
+                                                </a>
+                                            </Container>
+                                        </Col>
+                                        <Col style={{padding: '10px'}}>
+                                            <Container style={{border: '1px solid grey', borderRadius: '5px'}}>
+                                                <a className={'color-change'} onClick={() => setHoodie(0)}>
+                                                    <Image
+                                                        style={{display: 'block', maxHeight: '100%', maxWidth: '100%'}}
+                                                        src={'/RedHoodieFront1.jpg'}/>
+                                                    <p style={{color: 'black', margin: 0}}>Red</p>
+                                                </a>
+                                            </Container>
+                                        </Col>
+                                    </>
+                                }
+                            </Row>
+                            <Row>
+                                <p>
+                                    Motivational hoodie with a smooth zipper design
+                                </p>
+                            </Row>
+                            <Row>
+                                <Button style={{fontWeight: 'bold'}} size={'lg'} variant={'success'}
+                                        href={urls[hoodie]}>Purchase Now</Button>
+                            </Row>
+                        </Col>
+                    </Col>
+                </Row>
+            </Tab.Container>
+        </Container>
+    )
+}

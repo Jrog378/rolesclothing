@@ -1,0 +1,80 @@
+[
+    {
+        "id": "first-white-hoodie",
+        "title": "Fearless Sweater",
+        "description": "Sweater with faith oriented text",
+        "price": "59.99",
+        "colors": [
+            {
+                "name": "Gray",
+                "link": "https://buy.stripe.com/5kAdTDeEA42yaqY7sL",
+                "header": "/GrayFront.jpg",
+                "images": [
+                    "/GrayFront.jpg",
+                    "/GrayBack.jpg"
+                ]
+            },
+            {
+                "name": "Green",
+                "link": "https://buy.stripe.com/3cs3eZbso1UqeHe4gy",
+                "header": "/GreenFront.jpg",
+                "images": [
+                    "/GreenFront.jpg",
+                    "/GreenBack.jpg"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "first-hoodie",
+        "title": "Keep Going Zip Hoodie",
+        "description": "Motivational hoodie with a smooth zipper design",
+        "price": "59.99",
+        "colors": [
+            {
+                "name": "Black",
+                "link": "https://buy.stripe.com/00gg1L5406aG1UsfZd",
+                "header": "/BlackHoodieFront1.jpg",
+                "images": [
+                    "/BlackHoodieFront1.jpg",
+                    "/BlackHoodieBack1.jpg"
+                ]
+            },
+            {
+                "name": "Red",
+                "link": "https://buy.stripe.com/6oEg1L9kg56C42A7sG",
+                "header": "/RedHoodieFront1.jpg",
+                "images": [
+                    "/RedHoodieFront1.jpg",
+                    "/RedHoodieBack1.jpg"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fourth-hoodie",
+        "title": "Fresh Beginnings Hoodie",
+        "description": "Motivational interpretation print hoodie",
+        "price": "59.99",
+        "colors": [
+            {
+                "name": "Sand",
+                "link": "https://buy.stripe.com/3cs7vfeEA1Uq42AdQZ",
+                "header": "/SandHoodieFront4.jpg",
+                "images": [
+                    "/SandHoodieFront4.jpg",
+                    "/SandHoodieBack4.jpg"
+                ] 
+            },
+            {
+                "name": "Brown",
+                "link": "https://buy.stripe.com/14kdTD1RO0Qm2Yw4go",
+                "header": "/BrownHoodieFront4.jpg",
+                "images": [
+                    "/BrownHoodieFront4.jpg",
+                    "/BrownHoodieBack4.jpg"
+                ]
+            }
+        ]
+    }
+]
