@@ -2,8 +2,8 @@ import { useEffect } from 'react'
 import './App.css'
 import { Button, CardContent, Grid, Stack, Box, Typography, Card } from '@mui/material'
 import { Link } from "react-router";
-import { entries } from './pages/Products';
-import type { ProductDetailsProps } from './pages/ProductPage';
+import type { ProductDetailsProps, RootState } from './store';
+import { useSelector } from 'react-redux';
 
 // const lines = [
 //   'Look Better, Feel Better',
@@ -125,7 +125,7 @@ function Animation() {
 }
 
 function App() {
-
+  const entries = useSelector((state: RootState) => state.mySlice.data);
   let three: ProductDetailsProps[] = entries.slice(0, 3);
   return (
     <Box>

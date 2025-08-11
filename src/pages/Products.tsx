@@ -1,10 +1,10 @@
 import { Box, Card, CardContent, Grid, Typography } from "@mui/material";
-import ProductDetails from "./ProductDetails.json"
-import type { ProductDetailsProps } from "./ProductPage";
-
-export const entries = (ProductDetails as ProductDetailsProps[])
+import type { RootState } from "../store";
+import { useSelector } from "react-redux";
 
 export default function Products() {
+    const entries = useSelector((state: RootState) => state.mySlice.data);
+
     return (
         <Box style={{ padding: '10px' }}>
             <Grid container>

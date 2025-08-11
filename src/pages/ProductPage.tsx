@@ -1,24 +1,14 @@
 import { useParams } from "react-router"
-import ProductDetails from "./ProductDetails.json"
 import { useEffect, useState } from "react";
 import { Box, CardContent, CardMedia, Grid, Stack, Rating, Card, Button } from "@mui/material";
+import { type RootState} from '../store';
+import { useSelector } from "react-redux";
 
-export interface ProductDetailsProps {
-    id: string;
-    title: string;
-    description: string;
-    price: string;
-    colors: {
-        name: string;
-        link: string;
-        header: string
-        images: string[];
-    }[]
-}
 
 export default function ProductPage() {
     let { id } = useParams<{ id: string }>()
-    const entry = (ProductDetails as ProductDetailsProps[]).find(item => item.id === id)
+    const obj = useSelector((state: RootState) => state.mySlice.data);
+    const entry = obj.find(item => item.id === id)
 
     if (!entry) return <Box p={2}>Not found.</Box>;
 
