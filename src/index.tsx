@@ -1,4 +1,4 @@
-import { Button, Container, Stack } from "@mui/material";
+import { Button, Container, Stack, Typography } from "@mui/material";
 import { Link, Outlet } from "react-router";
 
 export default function Index() {
@@ -35,13 +35,8 @@ export default function Index() {
                 </Stack> */}
                 <Link to={'/products'}>
                 <Button sx={{
-                    textTransform: 'none',
-                    backgroundColor: 'rgba(100, 200, 255, 1)',
-                    color: 'rgb(50,50,50)',
-                    '&:hover': {
-                        backgroundColor: 'rgba(75, 175, 225, 1)'
-                    }
-                }} size='large' variant='contained'>Shop Roles Now</Button>
+                    textTransform: 'none', color: 'rgb(255, 252, 248)'
+                }} size='large' variant='contained' className="primary"><Typography color="white">Shop Roles Now</Typography></Button>
                 </Link>
             </Stack>
             <Outlet />

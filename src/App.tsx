@@ -143,19 +143,12 @@ function App() {
             </CardContent>
             <Stack direction={'row'} justifyContent={'flex-start'} spacing={2}>
               <Link to={'/products'}>
-                <Button size='large' sx={{
-                  textTransform: 'none',
-                  backgroundColor: 'rgba(100, 200, 255, 1)',
-                  color: 'rgb(50,50,50)',
-                  '&:hover': {
-                    backgroundColor: 'rgba(75, 175, 225, 1)'
-                  }
-                }} >
-                  Shop
-                </Button>
-              </Link>
-              <Button href='/products' size='large' sx={{ color: 'rgb(25,25,25)', textTransform: 'none' }}>
-                Explore
+                <Button sx={{
+                    textTransform: 'none', color: 'rgb(255, 252, 248)'
+                }} size='large' variant='contained' className="primary"><Typography color="white">Shop</Typography></Button>
+                </Link>
+              <Button href='/products' size='large' color='inherit' variant='outlined' sx={{ color: 'rgb(25,25,25)', border: '2px solid #9CAF88', textTransform: 'none' }}>
+              <Typography>Explore</Typography>
               </Button>
             </Stack>
           </Stack>

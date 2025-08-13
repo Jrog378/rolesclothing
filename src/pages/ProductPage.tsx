@@ -1,7 +1,7 @@
-import { useParams } from "react-router"
+import { Link, useParams } from "react-router"
 import { useEffect, useState } from "react";
-import { Box, CardContent, CardMedia, Grid, Stack, Rating, Card, Button } from "@mui/material";
-import { type RootState} from '../store';
+import { Box, CardContent, CardMedia, Grid, Stack, Rating, Card, Button, Typography } from "@mui/material";
+import { type RootState } from '../store';
 import { useSelector } from "react-redux";
 
 
@@ -74,14 +74,11 @@ export default function ProductPage() {
                             ))}
                         </Stack> */}
                             <br />
-                            <Button sx={{
-                                textTransform: 'none',
-                                backgroundColor: 'rgba(100, 200, 255, 1)',
-                                color: 'rgb(50,50,50)',
-                                '&:hover': {
-                                    backgroundColor: 'rgba(75, 175, 225, 1)'
-                                }
-                            }} size='large' variant='contained' href={colors[color].link}>Buy Now</Button>
+                            <Link to={colors[color].link}>
+                                <Button sx={{
+                                    textTransform: 'none', color: 'rgb(255, 252, 248)', width: '100%',
+                                }} size='large' variant='contained' className="primary"><Typography color="white">Buy Now</Typography></Button>
+                            </Link>
                         </Stack>
                     </Grid>
                 </Grid>
