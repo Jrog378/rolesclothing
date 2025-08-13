@@ -1,5 +1,178 @@
 [
     {
+        "id": "luck-hoodie",
+        "title": "Luck is all over Hoodie V2 Fall",
+        "description": "Upgrade your style",
+        "price": "59.99",
+        "colors": [
+            {
+                "name": "White",
+                "link": "https://buy.stripe.com/bJe9AU7PH6OFeDRfco8Vi0r",
+                "header": "/WhiteLuckHoodie.jpeg",
+                "images": [
+                    "/WhiteLuckHoodie.jpeg",
+                    "/WhiteLuckHoodie2.jpeg"
+                ]
+            },
+            {
+                "name": "Black",
+                "link": "https://buy.stripe.com/eVq8wQ5Hz3Ct53h6FS8Vi0s",
+                "header": "/BlackLuckHoodie.jpeg",
+                "images": [
+                    "/BlackLuckHoodie.jpeg",
+                    "/BlackLuckHoodie2.jpeg"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "witness-hoodie",
+        "title": "God is witness - Judgment day awaits",
+        "description": "Put new life into a classic wardrobe staple with your own art. This hoodie features a unisex design with side seams that help the garment retain its shape on the long run. With a spacious kangaroo pocket for enhanced daily practicality, a comfy true-to-size fit, and multiple colors to choose from, these hoodies provide a cozy wearing experience packed with style.",
+        "price": "59.99",
+        "colors": [
+            {
+                "name": "Jet Black",
+                "link": "https://buy.stripe.com/dRmeVe5Hzb4VanBfco8Vi0u",
+                "header": "/BlackWitnessHoodie.jpeg",
+                "images": [
+                    "/BlackWitnessHoodie.jpeg",
+                    "/BlackWitnessHoodie2.jpeg"
+                ]
+            },
+            {
+                "name": "Charcoal",
+                "link": "https://buy.stripe.com/fZu28s9XP1ul9jxggs8Vi0v",
+                "header": "/CharcoalWitnessHoodie.jpeg",
+                "images": [
+                    "/CharcoalWitnessHoodie.jpeg",
+                    "/CharcoalWitnessHoodie2.jpeg"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "roles-sweatshirt",
+        "title": "Your opportunity is right in front of you",
+        "description": "The opportunity awaits all who wait, be patient and be consistent, and all will come to you. This hoodie is for all who are practicing to be patient.",
+        "price": "59.99",
+        "colors": [
+            {
+                "name": "Black",
+                "link": "https://buy.stripe.com/7sYbJ2gmd3CtbrFc0c8Vi0t",
+                "header": "/BlackRolesSweatshirt.jpeg",
+                "images": [
+                    "/BlackRolesSweatshirt.jpeg",
+                    "/BlackRolesSweatshirt2.jpeg"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "eagle-hoodie",
+        "title": "Roles Customizable Streetwear",
+        "description": "Fit for all times of the year, be fashionable all year round!",
+        "price": "59.99",
+        "colors": [
+            {
+                "name": "White",
+                "link": "https://buy.stripe.com/28E28s9XP3Ct2V99S48Vi0w",
+                "header": "/WhiteEagleHoodie.jpeg",
+                "images": [
+                    "/WhiteEagleHoodie.jpeg",
+                    "/WhiteEagleHoodie2.jpeg"
+                ]
+            },
+            {
+                "name": "Dark Heather",
+                "link": "https://buy.stripe.com/8x200k5Hz1ulcvJ2pC8Vi0x",
+                "header": "/DarkEagleHoodie.jpeg",
+                "images": [
+                    "/DarkEagleHoodie.jpeg",
+                    "/DarkEagleHoodie2.jpeg"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "ball-sweatshirt",
+        "title": "Roles classic Basketball sweater",
+        "description": "Wear your sweater in fashion with the Roles basketball sweatshirt, designed to express people who love basketball.",
+        "price": "59.99",
+        "colors": [
+            {
+                "name": "Gray",
+                "link": "https://buy.stripe.com/bJebJ2ee5b4V7bpd4g8Vi0z",
+                "header": "/GrayBallSweatshirt.jpeg",
+                "images": [
+                    "/GrayBallSweatshirt.jpeg",
+                    "/GrayBallSweatshirt2.jpeg"
+                ]
+            },
+            {
+                "name": "Charcoal",
+                "link": "https://buy.stripe.com/eVq7sMb1Tc8Z3Zdggs8Vi0y",
+                "header": "/CharcoalBallSweatshirt.jpeg",
+                "images": [
+                    "/CharcoalBallSweatshirt.jpeg",
+                    "/CharcoalBallSweatshirt2.jpeg"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "strength-sweatshirt",
+        "title": "God Helps you at all times",
+        "description": "God gives strength to all. Join us and express yourself",
+        "price": "59.99",
+        "colors": [
+            {
+                "name": "Charcoal",
+                "link": "https://buy.stripe.com/14AeVe2vneh7gLZc0c8Vi0A",
+                "header": "/CharStrongSweatshirt.jpeg",
+                "images": [
+                    "/CharStrongSweatshirt.jpeg",
+                    "/CharStrongSweatshirt2.jpeg"
+                ]
+            },
+            {
+                "name": "Light Gray",
+                "link": "https://buy.stripe.com/bJe3cw3zrflbcvJ2pC8Vi0B",
+                "header": "/GrayStrongSweatshirt.jpeg",
+                "images": [
+                    "/GrayStrongSweatshirt.jpeg",
+                    "/GrayStrongSweatshirt2.jpeg"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "star-sweatshirt",
+        "title": "Believe in the plan - Sweater weather for All",
+        "description": "Ideal for any situation, a unisex heavy blend crewneck sweatshirt is pure comfort.",
+        "price": "59.99",
+        "colors": [
+            {
+                "name": "Gray",
+                "link": "https://buy.stripe.com/7sYaEYee54Gx53hc0c8Vi0C",
+                "header": "/GrayStarSweatshirt.jpeg",
+                "images": [
+                    "/GrayStarSweatshirt.jpeg",
+                    "/GrayStarSweatshirt2.jpeg"
+                ]
+            },
+            {
+                "name": "Green",
+                "link": "https://buy.stripe.com/aFa14o5Hzflb9jx6FS8Vi0D",
+                "header": "/GreenStarSweatshirt.jpeg",
+                "images": [
+                    "/GreenStarSweatshirt.jpeg",
+                    "/GreenStarSweatshirt2.jpeg"
+                ]
+            }
+        ]
+    },
+    {
         "id": "first-white-hoodie",
         "title": "Fearless Sweater",
         "description": "Sweater with faith oriented text",
