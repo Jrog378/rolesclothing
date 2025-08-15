@@ -11,7 +11,7 @@ a {
 }
 
 :root {
-  --color-maroon: #600000;
+  --color-maroon: #400000;
   --color-sage: #9CAF88;
   --color-tan: rgb(255, 252, 248);
   --color-black: #000000;
@@ -20,6 +20,7 @@ a {
 body {
   background-color: var(--color-tan);
   color: var(--color-black);
+  margin: 0;
 }
 
 h1, h2, h3 {
@@ -43,6 +44,13 @@ button.secondary {
   color: var(--color-black);
 }
 
+.footer-link {
+  color: rgb(100,100,100)
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
 
 /* :root {
 color-scheme: light dark;

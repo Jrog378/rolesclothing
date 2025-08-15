@@ -7,6 +7,7 @@ export default function Products() {
 
     return (
         <Box style={{ padding: '10px' }}>
+            <Typography variant="h3" fontSize={"xx-large"} textAlign={'center'}>All Products</Typography>
             <Grid container>
                 {entries.map((entry) => (
                     <Grid key={entry.id} size={{ md: 6, lg: 4 }} style={{ padding: '10px' }}>
@@ -17,8 +18,8 @@ export default function Products() {
                                         onMouseOut={e => (e.currentTarget.src = entry.colors[0].images[0])} style={{ width: '100%' }} />
                                 </CardContent>
                                 <Typography>
-                                    <h3 style={{ width: '100%', textAlign: 'center', margin: '0' }}>{entry.title}</h3>
-                                    <p style={{ width: '100%', textAlign: 'center', paddingBottom: '10px' }}>${entry.price}</p>
+                                    <Typography variant="h3" style={{ width: '100%', textAlign: 'center', margin: '0', fontSize:'large' }}>{entry.title}</Typography>
+                                    <Typography style={{ width: '100%', textAlign: 'center', paddingBottom: '10px', fontWeight:'bolder' }}>${entry.price}</Typography>
                                 </Typography>
                             </a>
                         </Card>

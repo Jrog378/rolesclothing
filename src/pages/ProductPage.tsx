@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router"
 import { useEffect, useState } from "react";
-import { Box, CardContent, CardMedia, Grid, Stack, Rating, Card, Button, Typography } from "@mui/material";
+import { Box, CardContent, CardMedia, Grid, Stack, Rating, Card, Button, Typography, Divider } from "@mui/material";
 import { type RootState } from '../store';
 import { useSelector } from "react-redux";
 
@@ -29,7 +29,7 @@ export default function ProductPage() {
                 <Grid container>
                     <Grid size={1}>
                         <Stack>
-                            {imgs.map((image, index) => (<CardMedia component={'img'} onClick={() => setImage(index)} key={index} style={{ objectFit: "contain" }} src={image} />))}
+                            {imgs.map((image, index) => (<Card className="product-card" style={{ margin: "0.2rem 0" }}><CardMedia component={'img'} onClick={() => setImage(index)} key={index} style={{ objectFit: "contain" }} src={image} /></Card>))}
                         </Stack>
                     </Grid>
                     <Grid size={6}>
@@ -41,17 +41,22 @@ export default function ProductPage() {
                         />
                     </Grid>
                     <Grid size={5}>
-                        <Stack>
-                            <h1>{entry.title}</h1>
-                            <CardContent sx={{ px: '0' }}><p style={{ margin: '0' }}>{entry.description}</p></CardContent>
-                            <Rating name="half-rating-read" defaultValue={4.5} precision={0.5} readOnly />
-                            <h2>${entry.price}</h2>
-                            <Grid container height={'100%'}>
+                        <Stack spacing={2}>
+                            <Typography variant="h1" fontSize={"xx-large"} fontWeight={'400'}>{entry.title}</Typography>
+                            <Stack direction={'row'} spacing={2}>
+                                <Rating name="half-rating-read" defaultValue={4.5} precision={0.5} readOnly />
+                                <Typography color="rgb(100,100,100)">(reviews)</Typography>
+                            </Stack>
+                            <Typography variant="h5">${entry.price}</Typography>
+                            <CardContent sx={{ p: '0' }}><Typography color="rgb(100,100,100)">{entry.description}</Typography></CardContent>
+                            <Divider style={{margin:'1rem 0'}}/>
+                            <Grid container height={'100%'} style={{margin:'0'}}>
+                                <Typography>Color: {colors[color].name}</Typography>
                                 <Stack direction={'row'} width={'100%'}>
                                     {colors.map((c, index) => (
                                         <Grid size={3} key={index} sx={{ p: '.2rem' }}>
                                             <a onClick={() => { setColor(index) }}>
-                                                <Card>
+                                                <Card className="product-card">
                                                     <CardMedia
                                                         component="img"
                                                         image={c.header}

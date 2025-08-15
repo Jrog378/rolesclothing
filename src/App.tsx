@@ -13,9 +13,9 @@ import { useSelector } from 'react-redux';
 //   '100% Satisfaction Guarantee',
 // ];
 
-function CarouselCard({entry}: {entry: ProductDetailsProps}) {
+function CarouselCard({ entry }: { entry: ProductDetailsProps }) {
   return (
-    <Grid key={entry.id} size={{ md: 6, lg: 4 }} style={{ padding: '10px', margin:'auto' }}>
+    <Grid key={entry.id} size={{ md: 6, lg: 4 }} style={{ padding: '10px', margin: 'auto' }}>
       <Card className={'product-card'}>
         <a className={'color-change'} href={`/products/${entry.id}`} style={{ color: 'black' }}>
           <CardContent>
@@ -138,17 +138,17 @@ function App() {
         </Grid>
         <Grid size={5} margin={'0 auto'}>
           <Stack justifyContent={'flex-end'} height={'100%'}>
-            <CardContent style={{ fontSize: 'larger' }}>
+            <Typography padding={"1rem 0"} fontSize={'larger'}>
               New drops, bold colors, and attitude to match. Find your next favorite fit and turn every sidewalk into your runway.
-            </CardContent>
+            </Typography>
             <Stack direction={'row'} justifyContent={'flex-start'} spacing={2}>
               <Link to={'/products'}>
                 <Button sx={{
-                    textTransform: 'none', color: 'rgb(255, 252, 248)'
+                  textTransform: 'none', color: 'rgb(255, 252, 248)'
                 }} size='large' variant='contained' className="primary"><Typography color="white">Shop</Typography></Button>
-                </Link>
+              </Link>
               <Button href='/products' size='large' color='inherit' variant='outlined' sx={{ color: 'rgb(25,25,25)', border: '2px solid #9CAF88', textTransform: 'none' }}>
-              <Typography>Explore</Typography>
+                <Typography>Explore</Typography>
               </Button>
             </Stack>
           </Stack>
@@ -176,7 +176,7 @@ function App() {
       <Animation />
       <Grid container>
         {three.map((one) => (
-          <CarouselCard entry={one}/>
+          <CarouselCard entry={one} />
         ))}
       </Grid>
       {/* <MuiTextCarousel /> */}
