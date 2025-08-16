@@ -24,107 +24,116 @@ p {
 
 /* Add this CSS to your global CSS file or within a <style> tag in your component file */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-5px) scale(1.25);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-5px) scale(1.25);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 @keyframes fadeInLeft {
   from {
     opacity: 0;
-    transform: translateX(50px); /* start right */
+    transform: translateX(50px);
+    /* start right */
   }
+
   to {
     opacity: 1;
-    transform: translateX(0); /* end at origin */
+    transform: translateX(0);
+    /* end at origin */
   }
 }
 
 
 .animated-brand {
-    animation: fadeIn 0.25s ease-out;
+  animation: fadeIn 0.25s ease-out;
 }
 
 /* MainContent.css */
 .scroll-image {
-    width: 100%;
+  width: 100%;
 }
 
 .scroll-text {
-    text-align: left;
-    font-size: 1.5rem;
-    text-shadow: 0 0 5px white, 0 0 5px white, 0 0 5px white, 0 0 5px white, 0 0 5px white;
-    padding-bottom: 10px;
-    margin: 50px 0;
-    opacity: 0;
-    transform: translateX(50px); /* Initial position off-screen to the right */
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  text-align: left;
+  font-size: 1.5rem;
+  text-shadow: 0 0 5px white, 0 0 5px white, 0 0 5px white, 0 0 5px white, 0 0 5px white;
+  padding-bottom: 10px;
+  margin: 50px 0;
+  opacity: 0;
+  transform: translateX(50px);
+  /* Initial position off-screen to the right */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .img-animation {
-    overflow: hidden;
-    position: relative;
-    height: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
 }
 
 .scroll-text-fade-in {
-    animation: fadeInLeft 1s ease-in forwards;
+  animation: fadeInLeft 1s ease-in forwards;
 }
 
 .head-button {
-    background: rgb(50, 50, 60);
-    background: linear-gradient(150deg, rgba(50, 50, 60, 1) 0%, rgba(100, 100, 100, 1) 50%, rgba(50, 50, 60, 1) 100%);
-    font-weight: bold;
-    color: whitesmoke;
+  background: rgb(50, 50, 60);
+  background: linear-gradient(150deg, rgba(50, 50, 60, 1) 0%, rgba(100, 100, 100, 1) 50%, rgba(50, 50, 60, 1) 100%);
+  font-weight: bold;
+  color: whitesmoke;
 }
 
 .head-button:hover {
-    border-bottom: 3px solid rgb(50, 50, 60);
+  border-bottom: 3px solid rgb(50, 50, 60);
 }
 
 .head-button:active {
-    border-bottom: 3px solid rgb(50, 50, 60);
-    background: rgb(100, 100, 100);
-    background: linear-gradient(150deg, rgba(100, 100, 100, 1) 0%, rgba(50, 50, 60, 1) 50%, rgba(100, 100, 100, 1) 100%);
+  border-bottom: 3px solid rgb(50, 50, 60);
+  background: rgb(100, 100, 100);
+  background: linear-gradient(150deg, rgba(100, 100, 100, 1) 0%, rgba(50, 50, 60, 1) 50%, rgba(100, 100, 100, 1) 100%);
 }
 
 a:link.color-change a:visited.color-change a:hover.color-change a:active.color-change {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 div:has(> a.color-change):hover {
-    border: 2px solid #9CAF88;
-    border-radius: 5px;
+  border: 2px solid #9CAF88;
+  border-radius: 5px;
 }
 
 div:has(> a.color-change) {
-    padding: 10px;
+  padding: 10px;
+}
+
+.product-card {
+  border: 1px solid whitesmoke;
 }
 
 .product-card:hover {
-    border: 1px solid #9CAF88;
+  border: 1px solid #9CAF88;
 }
 
 @media (max-width: 1200px) {
-    .img-animation {
-        position: fixed;
-        top: 12vh;
-        right: 0;
-        /*min-width: 150px;;*/
-        /*z-index: 0;*/
-    }
+  .img-animation {
+    position: fixed;
+    top: 12vh;
+    right: 0;
+    /*min-width: 150px;;*/
+    /*z-index: 0;*/
+  }
 }
 
 
 #video-animation {
-    border-radius: 10px;
-    max-width: 100%;
-    height: auto;
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
 }
 
 /*@media (min-aspect-ratio: 16/9){*/

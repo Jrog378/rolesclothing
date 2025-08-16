@@ -7,6 +7,9 @@ import PrivacyPolicy from "./pages/Privacy";
 import TermsOfService from "./pages/TOS";
 import ShippingAndReturns from "./pages/shipping";
 import Affiliates from "./pages/Affiliates";
+import HoodieSizingGuide from "./pages/SizeGuide";
+import CareGuide from "./pages/CareGuide";
+import SpecialRequestsPage from "./pages/SpecialRequest";
 
 const Router = createBrowserRouter([
     {
@@ -45,6 +48,18 @@ const Router = createBrowserRouter([
             {
                 path:'/affiliates',
                 element: <Affiliates/>
+            },
+            {
+                path:'/sizing-guide',
+                element: <HoodieSizingGuide/>
+            },
+            {
+                path:'/care-guide',
+                element: <CareGuide/>
+            },
+            {
+                path:'/special-request',
+                element: <SpecialRequestsPage/>
             }
         ]
     },

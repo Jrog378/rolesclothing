@@ -10,7 +10,7 @@ export default function Products() {
             <Typography variant="h3" fontSize={"xx-large"} textAlign={'center'}>All Products</Typography>
             <Grid container>
                 {entries.map((entry) => (
-                    <Grid key={entry.id} size={{ md: 6, lg: 4 }} style={{ padding: '10px' }}>
+                    <Grid key={entry.id} size={{ md: 6, lg: 3 }} alignContent={'center'} style={{ padding: '10px' }}>
                         <Card className={'product-card'}>
                             <a className={'color-change'} href={`/products/${entry.id}`} style={{ color: 'black' }}>
                                 <CardContent>

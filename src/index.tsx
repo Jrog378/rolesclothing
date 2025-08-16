@@ -60,7 +60,7 @@ export default function Index() {
                             <h4 style={{ margin: '0', color:'rgb(255, 252, 248)', fontWeight:'lighter' }}>
                                 PRODUCTS
                             </h4>
-                            <Link to={''} className="footer-link">
+                            <Link to={'/products'} className="footer-link">
                                 <p>Shop</p>
                             </Link>
                             <Link to={''} className="footer-link">
@@ -88,13 +88,13 @@ export default function Index() {
                             <h4 style={{ margin: '0', color:'rgb(255, 252, 248)', fontWeight:'lighter' }}>
                                 GUIDES
                             </h4>
-                            <Link to={''} className="footer-link">
+                            <Link to={'/sizing-guide'} className="footer-link">
                                 <p>Size Guide</p>
                             </Link>
-                            <Link to={''} className="footer-link">
+                            <Link to={'/care-guide'} className="footer-link">
                                 <p>Care Instructions</p>
                             </Link>
-                            <Link to={''} className="footer-link">
+                            <Link to={'/special-request'} className="footer-link">
                                 <p>Special Requests</p>
                             </Link>
                         </Grid>
