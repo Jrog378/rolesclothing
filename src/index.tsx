@@ -1,11 +1,9 @@
 import { Box, Button, Container, Divider, Grid, Stack, Typography } from "@mui/material";
 import { Link, Outlet } from "react-router";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function Index() {
     return (
         <>
-            <SpeedInsights />
             <Container maxWidth={'xl'}>
                 <Stack direction={'row'} justifyContent={'space-between'} padding={'0.4rem'}>
                     <Link to={'/'}>
