@@ -1,9 +1,11 @@
 import { Box, Button, Container, Divider, Grid, Stack, Typography } from "@mui/material";
 import { Link, Outlet } from "react-router";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function Index() {
     return (
         <>
+            <SpeedInsights />
             <Container maxWidth={'xl'}>
                 <Stack direction={'row'} justifyContent={'space-between'} padding={'0.4rem'}>
                     <Link to={'/'}>
@@ -43,21 +45,21 @@ export default function Index() {
                 <Outlet />
                 <Divider style={{ paddingTop: '1rem' }} />
             </Container>
-            <Box style={{background:'#400000'}}>
+            <Box style={{ background: '#400000' }}>
                 <Container>
                     <Grid container spacing={8} paddingTop={'2rem'}>
                         <Grid size={3}>
                             <Stack>
-                                <h2 style={{ margin: '0', color:'rgb(255, 252, 248)', fontWeight:'lighter' }}>
+                                <h2 style={{ margin: '0', color: 'rgb(255, 252, 248)', fontWeight: 'lighter' }}>
                                     ROLES CLOTHING
                                 </h2>
-                                <Typography style={{color:'rgb(100,100,100)', paddingTop:'0.8rem'}}>
+                                <Typography style={{ color: 'rgb(100,100,100)', paddingTop: '0.8rem' }}>
                                     Premium clothing that truly represents what you stand for.
                                 </Typography>
                             </Stack>
                         </Grid>
                         <Grid size={3}>
-                            <h4 style={{ margin: '0', color:'rgb(255, 252, 248)', fontWeight:'lighter' }}>
+                            <h4 style={{ margin: '0', color: 'rgb(255, 252, 248)', fontWeight: 'lighter' }}>
                                 PRODUCTS
                             </h4>
                             <Link to={'/products'} className="footer-link">
@@ -71,7 +73,7 @@ export default function Index() {
                             </Link>
                         </Grid>
                         <Grid size={3}>
-                            <h4 style={{ margin: '0', color:'rgb(255, 252, 248)', fontWeight:'lighter' }}>
+                            <h4 style={{ margin: '0', color: 'rgb(255, 252, 248)', fontWeight: 'lighter' }}>
                                 INFO
                             </h4>
                             <Link to={'/privacy-policy'} className="footer-link">
@@ -85,7 +87,7 @@ export default function Index() {
                             </Link>
                         </Grid>
                         <Grid size={3}>
-                            <h4 style={{ margin: '0', color:'rgb(255, 252, 248)', fontWeight:'lighter' }}>
+                            <h4 style={{ margin: '0', color: 'rgb(255, 252, 248)', fontWeight: 'lighter' }}>
                                 GUIDES
                             </h4>
                             <Link to={'/sizing-guide'} className="footer-link">
@@ -100,7 +102,7 @@ export default function Index() {
                         </Grid>
                     </Grid>
                     <Divider />
-                    <footer style={{ width: '100%', padding: '1rem', color:'rgb(100,100,100)' }}>© 2025 Roles Clothing - All Rights Reserved</footer>
+                    <footer style={{ width: '100%', padding: '1rem', color: 'rgb(100,100,100)' }}>© 2025 Roles Clothing - All Rights Reserved</footer>
                 </Container>
             </Box>
         </>
