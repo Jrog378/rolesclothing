@@ -5,6 +5,9 @@ import router from './Router'
 import './index.css'
 import { Provider } from 'react-redux'
 import { store } from './store'
+import { injectSpeedInsights } from '@vercel/speed-insights';
+
+injectSpeedInsights();
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
