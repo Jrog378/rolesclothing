@@ -1,3 +1,9 @@
+# This is the website for RolesClothing
+
+This website is made with Vite, ReactJS, and Typescript, along with the Stripe API to handle secure purchases.
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
